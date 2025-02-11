@@ -27,13 +27,15 @@ public class MainApp {
         System.out.println("summary of elements >5: "+sum);
     }
 
-    public static void massive1(int n, int[] arr) {
+    public static void massive1(int n, int[] arr1) {
+        int[] arr = arr1.clone();
         for (int i = 0; i< arr.length; i++) {
             arr[i]=n;
         }
         System.out.println(Arrays.toString(arr));
     }
-    public static void newmassive(int n, int [] arr) {
+    public static void newmassive(int n, int [] arr1) {
+        int[] arr = arr1.clone();
         for (int i = 0; i< arr.length; i++) {
             arr[i]+=n;
         }
