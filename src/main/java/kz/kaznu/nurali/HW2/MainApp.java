@@ -9,7 +9,7 @@ public class MainApp {
         int[] arr1 = {1,2,3,4,5,6};
         sumOfMassive(5, arr1);
         massive1(7, arr1);
-        newmassive(arr1);
+        newmassive(5, arr1);
         compareHalves(arr1);
     }
 
@@ -33,9 +33,9 @@ public class MainApp {
         }
         System.out.println(Arrays.toString(arr));
     }
-    public static void newmassive(int [] arr) {
+    public static void newmassive(int n, int [] arr) {
         for (int i = 0; i< arr.length; i++) {
-            arr[i]+=2;
+            arr[i]+=n;
         }
         System.out.println(Arrays.toString(arr));
     }
