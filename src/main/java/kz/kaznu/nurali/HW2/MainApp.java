@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class MainApp {
     public static void main(String[] args) {
         printString(5, "The Amazing Spider man will be released in 2012");
-        int[] arr1 = {1,2,3,4,6};
+        int[] arr1 = {1,2,3,4,5,6};
         sumOfMassive(5, arr1);
         massive1(7, arr1);
         newmassive(arr1);
@@ -41,12 +41,15 @@ public class MainApp {
     }
 
     public static void compareHalves(int [] array3) {
-        int mid = (array3.length+1)/2;
+        int mid = array3.length/2;
+        if (array3.length%2!=0) {
+            mid=mid+1;
+        }
         int sum1 = 0, sum2=0;
         for (int i = 0; i<mid; i++) {
             sum1+=array3[i];
         }
-        for (int i = mid-1; i<array3.length; i++) {
+        for (int i = mid; i<array3.length; i++) {
             sum2+=array3[i];
         }
         System.out.println("Сумма первой половины: " + sum1);
