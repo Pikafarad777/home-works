@@ -6,19 +6,18 @@ import java.util.Scanner;
 public class MainApp {
     public static void main(String[] args) {
         printString(5, "The Amazing Spider man will be released in 2012");
-        sumOfMassive();
-        int[] massive1 = new int[5];
-        massive1(7, massive1);
-        newmassive();
-        compareHalves();
+        int[] arr1 = {1,2,3,4,6};
+        sumOfMassive(5, arr1);
+        massive1(7, arr1);
+        newmassive(arr1);
+        compareHalves(arr1);
     }
 
     public static void printString(int n, String s) {
         while (n-- > 0) System.out.println(s);
     }
 
-    public static void sumOfMassive() {
-        int[] array = {1, 7, -5, 15, 52};
+    public static void sumOfMassive(int n, int[] array) {
         int sum = 0;
         for (int i = 0; i<array.length; i++) {
             if (array[i]> 5) {
@@ -34,26 +33,26 @@ public class MainApp {
         }
         System.out.println(Arrays.toString(arr));
     }
-    public static void newmassive() {
-        int[] newarray = {2, 5, 7, 14, 52};
-        for (int i = 0; i< newarray.length; i++) {
-            newarray[i]+=2;
+    public static void newmassive(int [] arr) {
+        for (int i = 0; i< arr.length; i++) {
+            arr[i]+=2;
         }
-        System.out.println(Arrays.toString(newarray));
+        System.out.println(Arrays.toString(arr));
     }
 
-    public static void compareHalves() {
-        int[] array3 = {2, 3, 4, 1, 32, 7, 1, 4};
-        int mid = array3.length/2;
+    public static void compareHalves(int [] array3) {
+        int mid = (array3.length+1)/2;
         int sum1 = 0, sum2=0;
         for (int i = 0; i<mid; i++) {
             sum1+=array3[i];
         }
-        for (int i = mid; i<array3.length; i++) {
+        for (int i = mid-1; i<array3.length; i++) {
             sum2+=array3[i];
         }
+        System.out.println("Сумма первой половины: " + sum1);
+        System.out.println("Сумма второй половины: " + sum2);
         System.out.println(sum1>sum2? "First is bigger: " + sum1:
-                sum1<sum2 ? "Second is bigger: " + sum2:
+                sum1<sum2? "Second is bigger: " + sum2:
                 "They are equal: " + sum1);
     }
 }
