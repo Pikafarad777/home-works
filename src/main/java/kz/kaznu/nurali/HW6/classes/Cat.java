@@ -1,4 +1,4 @@
-package kz.kaznu.nurali.HW6;
+package kz.kaznu.nurali.HW6.classes;
 
 public class Cat {
     String name;

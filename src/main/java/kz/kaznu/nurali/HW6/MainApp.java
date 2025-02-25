@@ -1,5 +1,8 @@
 package kz.kaznu.nurali.HW6;
 
+import kz.kaznu.nurali.HW6.classes.Cat;
+import kz.kaznu.nurali.HW6.classes.Dish;
+
 public class MainApp {
     public static void main(String[] args) {
         Cat[] cats = {
