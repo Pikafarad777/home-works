@@ -1,9 +1,8 @@
 package kz.kaznu.nurali.HW7.transport;
 
 import kz.kaznu.nurali.HW7.Terrain;
-import kz.kaznu.nurali.HW7.transport.Transport;
 
-public class Horse extends Transport {
+public class Horse implements Movement {
     private int energy = 100;
     @Override
     public boolean canMove(Terrain terrain){

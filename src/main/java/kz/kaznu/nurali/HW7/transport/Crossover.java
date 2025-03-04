@@ -1,9 +1,8 @@
 package kz.kaznu.nurali.HW7.transport;
 
 import kz.kaznu.nurali.HW7.Terrain;
-import kz.kaznu.nurali.HW7.transport.Transport;
 
-public class Crossover extends Transport {
+public class Crossover implements Movement {
     private int fuel = 100;
     @Override
     public boolean canMove(Terrain terrain) {

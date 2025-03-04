@@ -1,9 +1,8 @@
 package kz.kaznu.nurali.HW7.transport;
 
 import kz.kaznu.nurali.HW7.Terrain;
-import kz.kaznu.nurali.HW7.transport.Transport;
 
-public class Bicycle extends Transport {
+public class Bicycle implements Movement {
     @Override
     public boolean canMove(Terrain terrain) {
         return terrain != Terrain.SWAMP;

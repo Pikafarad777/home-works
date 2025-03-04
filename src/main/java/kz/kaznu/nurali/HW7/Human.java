@@ -1,17 +1,18 @@
 package kz.kaznu.nurali.HW7;
 
-import kz.kaznu.nurali.HW7.transport.Transport;
+import kz.kaznu.nurali.HW7.transport.Movement;
 
 public class Human {
     private String name;
-    private Transport currentTransport;
+    private Movement currentTransport;
     private int energy = 10;
+
 
     public Human(String name) {
         this.name = name;
     }
 
-    public void setCurrentTransport(Transport transport) {
+    public void setCurrentTransport(Movement transport) {
         this.currentTransport = transport;
         System.out.println(name + " сел на " + transport.getClass().getSimpleName());
     }
