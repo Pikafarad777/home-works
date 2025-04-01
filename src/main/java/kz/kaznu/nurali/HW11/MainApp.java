@@ -21,12 +21,35 @@ public class MainApp {
 
         System.out.println("Введите имя файла для работы: ");
         String fileName = scanner.nextLine();
-        File selectedFile = new File(fileName);
+        File selectedFile = new File(folder, fileName);
 
         if (!selectedFile.exists() || !selectedFile.isFile()){
             System.out.println("Файл не существует");
             return;
         }
+        System.out.println("Содержимое файла:");
+        try (BufferedReader reader = new BufferedReader(new FileReader(selectedFile))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            System.out.println("Ошибка при чтении файла: " + e.getMessage());
+            return;
+        }
+
+        System.out.println("Введите строку для добавления в файл: ");
+        String userInput = scanner.nextLine();
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(selectedFile, true))) {
+            writer.write(userInput);
+            writer.newLine();
+            System.out.println("Строка успешно добавлена.");
+        } catch (IOException e) {
+            System.out.println("Ошибка при записи в файл: " + e.getMessage());
+        }
+
+
 
     }
 }
